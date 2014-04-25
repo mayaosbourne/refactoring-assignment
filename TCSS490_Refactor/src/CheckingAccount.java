@@ -2,11 +2,7 @@
 public class CheckingAccount 
 {
 	private int fAccountNumber;
-	private String fName;
-	private String fStreet;
-	private String fZipcode;
-	private String fTown;
-	private String fCountry;
+	private Customer customer;
 	private boolean fDebitAllowed;
 	private double fDebitAmount;
 	private double fBalance;
@@ -18,13 +14,9 @@ public class CheckingAccount
 	private static DebitCard fDebitCard;
 	private static int fNextAccountNumber = 0;
 	
-	public CheckingAccount(String name, String street, String zipcode, String town, String country)
+	public CheckingAccount(String name, String street, String zipCode, String town, String country)
 	{
-		fName = name;
-		fStreet = street;
-		fZipcode = zipcode;
-		fTown = town;
-		fCountry = country;
+		customer = new Customer(name, street, zipCode, town, country);
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 		fDebitAllowed = false;
@@ -34,11 +26,7 @@ public class CheckingAccount
 	
 	public CheckingAccount(String name, String street, String zipCode, String town, String country, float debit)
 	{
-		fName = name;
-		fStreet = street;
-		fZipcode = zipCode;
-		fTown = town;
-		fCountry = country;
+		customer = new Customer(name, street, zipCode, town, country);
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 		fDebitAllowed = true;
@@ -63,11 +51,11 @@ public class CheckingAccount
 	{
 		System.out.println("**************************************");
 		System.out.println("Savings account:     " + fAccountNumber);
-		System.out.println("Account holder name: " + fName);
-		System.out.println("Address:             " + fStreet);
-		System.out.print("                     " + fZipcode);
-		System.out.println(" " + fTown);
-		System.out.println(fCountry.toUpperCase());
+		System.out.println("Account holder name: " + customer.fName);
+		System.out.println("Address:             " + customer.fStreet);
+		System.out.print("                     " + customer.fZipcode);
+		System.out.println(" " + customer.fTown);
+		System.out.println(customer.fCountry.toUpperCase());
 		System.out.println("**************************************");
 		System.out.println("Balance:  " + fBalance);
 		System.out.println("**************************************");
