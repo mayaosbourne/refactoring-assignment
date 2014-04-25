@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class CheckingAccountTest {
 
-	private CheckingAccount  checkingAccOne;
+	private CheckingAccount checkingAccOne;
 	
 	private CheckingAccount checkingAccTwo;
 	
@@ -59,6 +59,7 @@ public class CheckingAccountTest {
 	@Test
 	public void testVerseMoney() {
 		checkingAccOne.verseMoney(2);
+		checkingAccOne.print();
 		assertEquals(checkingAccOne.getBalance(), 2.0, 0.1);
 	}
 
