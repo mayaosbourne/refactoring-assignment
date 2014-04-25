@@ -51,11 +51,11 @@ public class CheckingAccount
 	{
 		System.out.println("**************************************");
 		System.out.println("Savings account:     " + fAccountNumber);
-		System.out.println("Account holder name: " + customer.fName);
-		System.out.println("Address:             " + customer.fStreet);
-		System.out.print("                     " + customer.fZipcode);
-		System.out.println(" " + customer.fTown);
-		System.out.println(customer.fCountry.toUpperCase());
+		System.out.println("Account holder name: " + customer.getfName());
+		System.out.println("Address:             " + customer.getfStreet());
+		System.out.print("                     " + customer.getfZipcode());
+		System.out.println(" " + customer.getfTown());
+		System.out.println(customer.getfCountry().toUpperCase());
 		System.out.println("**************************************");
 		System.out.println("Balance:  " + fBalance);
 		System.out.println("**************************************");

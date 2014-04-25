@@ -1,10 +1,10 @@
 
 public class Customer {
-	public String fName;
-	public String fStreet;
-	public String fZipcode;
-	public String fTown;
-	public String fCountry;
+	private String fName;
+	private String fStreet;
+	private String fZipcode;
+	private String fTown;
+	private String fCountry;
 
 	public Customer(String name, String street, String zipCode, String town, String country) {
 		fName = name;
@@ -13,5 +13,25 @@ public class Customer {
 		fTown = town;
 		fCountry = country;
 	}
-	
+
+	public String getfName() {
+		return fName;
+	}
+
+	public String getfStreet() {
+		return fStreet;
+	}
+
+	public String getfZipcode() {
+		return fZipcode;
+	}
+
+	public String getfTown() {
+		return fTown;
+	}
+
+	public String getfCountry() {
+		return fCountry;
+	}
+
 }

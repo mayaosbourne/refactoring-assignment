@@ -1,11 +1,7 @@
 
 public class SavingsAccount {
 	private int fAccountNumber;
-	private String fName;
-	private String fStreet;
-	private String fZipCode;
-	private String fTown;
-	private String fCountry;
+	private Customer customer;
 	public double fBalance;
 	private static double costs = 1; // per period there is a cost associated with this account
 									// that equals 1 pound
@@ -14,11 +10,7 @@ public class SavingsAccount {
 	
 	public SavingsAccount(String name, String street, String zipCode, String town, String country)
 	{
-		fName = name;
-		fStreet = street;
-		fZipCode = zipCode;
-		fTown = town;
-		fCountry = country;
+		customer = new Customer(name, street, zipCode, town, country);
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 	}
@@ -46,19 +38,18 @@ public class SavingsAccount {
 		fBalance += amount;
 	}
 	
-	public String print()
+	public void print()
 	{
 		System.out.println("**************************************");
 		System.out.println("Savings account:     " + fAccountNumber);
-		System.out.println("Account holder name: " + fName);
-		System.out.println("Address:             " + fStreet);
-		System.out.print("                     " + fZipCode);
-		System.out.println(" " + fTown);
-		System.out.println(fCountry.toUpperCase());
+		System.out.println("Account holder name: " + customer.getfName());
+		System.out.println("Address:             " + customer.getfStreet());
+		System.out.print("                     " + customer.getfZipcode());
+		System.out.println(" " + customer.getfTown());
+		System.out.println(customer.getfCountry().toUpperCase());
 		System.out.println("**************************************");
 		System.out.println("Balance:  " + fBalance);
 		System.out.println("**************************************");
-		return fCountry;
 	}
 	
 	
