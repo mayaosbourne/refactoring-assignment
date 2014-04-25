@@ -9,26 +9,19 @@ public class DebitCard
 	private String fTown;
 	private String fZipCode;
 	private String fCountry;
+	private Customer customer;
 	
 	
 	public DebitCard(String name, String street, String town, String zipCode, String country)
 	{
-		fName = name;
-		fStreet = street;
-		fTown = town;
-		fZipCode = zipCode;
-		fCountry = country;
+		customer = new Customer(name, street, zipCode, town, country);
 		fDebitCardNumber = fLastDebitCardNumber;
 		fLastDebitCardNumber++;
 	}
 	
 	public DebitCard(String name, String street, String town, String zipCode, String country, double limit, CheckingAccount account)
 	{
-		fName = name;
-		fStreet = street;
-		fTown = town;
-		fZipCode = zipCode;
-		fCountry = country;
+		customer = new Customer(name, street, zipCode, town, country);
 		fDebitCardNumber = fLastDebitCardNumber;
 		fLastDebitCardNumber++;
 		fAccountConnectedTo = account;
