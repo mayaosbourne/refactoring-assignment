@@ -6,7 +6,8 @@ public class Customer {
 	private String fTown;
 	private String fCountry;
 
-	public Customer(String name, String street, String zipCode, String town, String country) {
+	public Customer(String name, String street, String zipCode, String town, String country) 
+	{
 		fName = name;
 		fStreet = street;
 		fZipcode = zipCode;

@@ -4,11 +4,6 @@ public class DebitCard
 	private static int fLastDebitCardNumber;
 	private CheckingAccount fAccountConnectedTo;
 	private int fDebitCardNumber;
-	private String fName;
-	private String fStreet;
-	private String fTown;
-	private String fZipCode;
-	private String fCountry;
 	private Customer customer;
 	
 	
