@@ -4,11 +4,6 @@ public class CreditCard
 	private static int fLastCreditCardNumber;
 	private int fAccountConnectedTo;
 	private int fCreditCardNumber;
-	private String fName;
-	private String fStreet;
-	private String fTown;
-	private String fzipCode;
-	private String fCountry;
 	private double fLimit; // you cannot spend more than this limit
 	private double fBalance;
 	private Customer customer;
