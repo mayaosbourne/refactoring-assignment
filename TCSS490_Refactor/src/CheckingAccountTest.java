@@ -147,7 +147,7 @@ public class CheckingAccountTest {
 		CheckingAccount checkOne = new CheckingAccount("Dawn Rocks", "Mocking Bird Ln", 
 				"98146", "Seattle", "USA", 1);
 		
-		assertEquals(23, checkOne.getAccountNumber(), 0.001);
+		assertEquals(26, checkOne.getAccountNumber(), 0.001);
 	}
 
 	/**

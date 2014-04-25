@@ -40,18 +40,4 @@ public class DebitCardTest
 		assertFalse("Testing else", debitCardTwo.pay(20.00));
 	}
 
-
-	private void AssertionFailedError(boolean pay)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private void assertError(boolean pay)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
 }
