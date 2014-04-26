@@ -15,11 +15,6 @@ public class CheckingAccount extends AbstractAccount {
 	/**
 	 * {@inheritDoc}
 	 */
-	private int fAccountNumber = 0;
-	
-	/**
-	 * {@inheritDoc}
-	 */
 	private double fBalance;
 	
 	/**
@@ -123,13 +118,12 @@ public class CheckingAccount extends AbstractAccount {
 	 * @return
 	 */
 	public int getAccountNumber() {
-		return fAccountNumber;	
+		return super.getAccountNumber();
 	}
-	
 	
 	@Override
 	public boolean equals(Object o) {
-		if(fAccountNumber == ((CheckingAccount)o).fAccountNumber)
+		if(getAccountNumber() == ((CheckingAccount)o).getAccountNumber())
 			return true;
 		else
 			return false;
