@@ -49,7 +49,6 @@ public class BankTest {
 	@Test
 	public void testWithdrawMoney() {
 		int accountNum = bankTest.openSimpleCheckingAccount();
-		bankTest.withdrawMoney(1,0);
 		assertFalse("Test withdraw money", bankTest.withdrawMoney(accountNum, 0));
 	}
 

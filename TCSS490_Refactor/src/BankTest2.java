@@ -54,7 +54,7 @@ public class BankTest2
 	public void testOpenFullPackage()
 	{
 		int accountNum1 = bankTest1.openFullPackage();
-		assertEquals("Test OpenFullPackage", 1, accountNum1);
+		assertEquals("Test OpenFullPackage", 3, accountNum1);
 	}
 
 	/**
@@ -81,10 +81,9 @@ public class BankTest2
 	 * Test method for {@link Bank#withdrawMoney(int, double)}.
 	 */
 	@Test
-	public void testWithdrawMoney()
-	{
-		CheckingAccount account = new CheckingAccount(customerOne);
-		assertFalse("Test withdraw money", bankTest2.withdrawMoney(account.getAccountNumber(), 5));
+	public void testWithdrawMoney() {
+		int accountNum = bankTest.openSimpleCheckingAccount();
+		assertFalse("Test withdraw money", bankTest.withdrawMoney(accountNum, 0));
 	}
 
 }
