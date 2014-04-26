@@ -44,20 +44,6 @@ public class CheckingAccount
 		}
 	}
 	
-	public void print()
-	{
-		System.out.println("**************************************");
-		System.out.println("Savings account:     " + fAccountNumber);
-		System.out.println("Account holder name: " + myCustomer.getfName());
-		System.out.println("Address:             " + myCustomer.getfStreet());
-		System.out.print("                     " + myCustomer.getfZipcode());
-		System.out.println(" " + myCustomer.getfTown());
-		System.out.println(myCustomer.getfCountry().toUpperCase());
-		System.out.println("**************************************");
-		System.out.println("Balance:  " + fBalance);
-		System.out.println("**************************************");
-	}
-	
 	public boolean withdrawal(double amount)
 	{
 		if(((fBalance - amount) < 0) && (!fDebitAllowed))
@@ -73,11 +59,6 @@ public class CheckingAccount
 		{
 			return false;
 		}
-	}
-	
-	public void verseMoney(double amount)
-	{
-		fBalance += amount;
 	}
 	
 	public double getBalance()
@@ -118,4 +99,19 @@ public class CheckingAccount
 			return false;
 				
 	}
+	
+	public void print()
+	{
+		System.out.println("**************************************");
+		System.out.println("Savings account:     " + fAccountNumber);
+		System.out.println("Account holder name: " + myCustomer.getfName());
+		System.out.println("Address:             " + myCustomer.getfStreet());
+		System.out.print("                     " + myCustomer.getfZipcode());
+		System.out.println(" " + myCustomer.getfTown());
+		System.out.println(myCustomer.getfCountry().toUpperCase());
+		System.out.println("**************************************");
+		System.out.println("Balance:  " + fBalance);
+		System.out.println("**************************************");
+	}
+	
 }

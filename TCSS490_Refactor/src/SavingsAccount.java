@@ -28,7 +28,7 @@ public class SavingsAccount {
 		}
 	}
 	
-	public void verseMoney(double amount)
+	public void increaseBalance(double amount)
 	{
 		fBalance += amount;
 	}
