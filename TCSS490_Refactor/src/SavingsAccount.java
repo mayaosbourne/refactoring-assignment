@@ -32,7 +32,7 @@ public class SavingsAccount extends AbstractAccount {
 	 * balance in this account.
 	 */
 	public void calculateInterest() {
-		fBalance = fBalance + (fBalance * interestRate / 100);
+		fBalance = super.getBalance() + (super.getBalance() * interestRate / 100);
 	}
 	
 	/**

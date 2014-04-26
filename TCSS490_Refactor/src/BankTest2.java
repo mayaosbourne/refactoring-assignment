@@ -83,10 +83,8 @@ public class BankTest2
 	@Test
 	public void testWithdrawMoney()
 	{
-		int accountNum = bankTest2.openSimpleCheckingAccount();
-		assertFalse("Test withdraw money", bankTest2.withdrawMoney(accountNum, 5.0));
-//		CheckingAccount account = new CheckingAccount(customerOne);
-//		assertFalse("Test withdraw money", bankTest2.withdrawMoney(account.getAccountNumber(), 5));
+		CheckingAccount account = new CheckingAccount(customerOne);
+		assertFalse("Test withdraw money", bankTest2.withdrawMoney(account.getAccountNumber(), 5));
 	}
 
 }
