@@ -54,7 +54,7 @@ public class CheckingAccountTest2
 	public void testGetAccountNumber()
 	{
 		CheckingAccount checkOne = new CheckingAccount(customerOne, 1);		
-		assertEquals(9, checkOne.getAccountNumber(), 0.001); //Account number should be 9 at this point due
+		assertEquals(29, checkOne.getAccountNumber(), 0.001); //Account number should be 9 at this point due
 															 //to how program functions
 	}
 

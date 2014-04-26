@@ -44,7 +44,7 @@ public class BankTest2
 	public void testOpenSimpleCheckingAccount()
 	{
 		int accountNum = bankTest.openSimpleCheckingAccount();
-		assertEquals("Test OpenSimpleCheckingAccount", 0, accountNum);
+		assertEquals("Test OpenSimpleCheckingAccount", 14, accountNum);
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class BankTest2
 	public void testOpenFullPackage()
 	{
 		int accountNum1 = bankTest1.openFullPackage();
-		assertEquals("Test OpenFullPackage", 3, accountNum1);
+		assertEquals("Test OpenFullPackage", 17, accountNum1);
 	}
 
 	/**
