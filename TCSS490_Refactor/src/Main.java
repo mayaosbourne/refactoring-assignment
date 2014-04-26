@@ -1,5 +1,5 @@
 /**
- * This class 
+ * This is the main class to run the bank account.
  * 
  * @author original author unknown
  * @author refactored by Maya Osbourne & Dawn Rocks

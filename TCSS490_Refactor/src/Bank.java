@@ -1,30 +1,57 @@
 import java.util.Vector;
 
+/**
+ * This is the Bank class, which specifies the behavior associated
+ * with a bank.
+ * 
+ * @author original author unknown
+ * @author refactored by Maya Osbourne & Dawn Rocks
+ * @version 4.25.2014
+ */
+public class Bank {
 
-public class Bank 
-{
-
+	/**
+	 * The customer.
+	 */
 	private Customer fCustomer;
+	
+	/**
+	 * The credit card.
+	 */
 	private CreditCard fCreditCard;
+	
+	/**
+	 * The checking accounts.
+	 */
 	private Vector<CheckingAccount> fCheckingAccounts;
+	
+	/**
+	 * The savings account.
+	 */
 	private Vector<SavingsAccount> fSavingAccounts;
 	
-	public Bank()
-	{
+	/**
+	 * The bank constructor, creates a new vector of Checking Accounts
+	 * and Savings Accounts and a new customer.
+	 */
+	public Bank() {
 		fCheckingAccounts = new Vector<CheckingAccount>();
 		fSavingAccounts = new Vector<SavingsAccount>();
 		fCustomer = new Customer("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA");
 	}
 	
-	public int openSimpleCheckingAccount()
-	{
+	/**
+	 * Open a simple checking account and return its account number.
+	 * 
+	 * @return The checking account number.
+	 */
+	public int openSimpleCheckingAccount() {
 		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
 		return newAccount.getAccountNumber();
 	}
 	
-	public int openFullPackage()
-	{
+	public int openFullPackage() {
 		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
 		applyForCreditCard(fCustomer, newAccount);
@@ -34,28 +61,35 @@ public class Bank
 		return newAccount.getAccountNumber();
 	}
 	
-	public boolean applyForCreditCard(Customer customer, CheckingAccount account)
-	{
-		if(account.getBalance() < 0)
-		{
+	/**
+	 * Apply for a credit card, success if balance check succeeds.
+	 * 
+	 * @param customer The customer.
+	 * @param account The checking account.
+	 * @return Success or failure?
+	 */
+	public boolean applyForCreditCard(Customer customer, CheckingAccount account) {
+		if(account.getBalance() < 0) {
 			return false;
 		}
-		if(account.getBalance() <= 2500)
-		{
+		if(account.getBalance() <= 2500) {
 			fCreditCard = new CreditCard();
-		}
-		else
-		{
+		} else {
 			fCreditCard = new CreditCard(5000);
 		}
 		return true;
 	}
 	
-	public boolean withdrawMoney(int accountNumber, double amount)
-	{
+	/**
+	 * Withdraw money from the checking account.
+	 * 
+	 * @param accountNumber The account number.
+	 * @param amount The amount to withdraw.
+	 * @return Success or failure?
+	 */
+	public boolean withdrawMoney(int accountNumber, double amount) {
 		CheckingAccount account = new CheckingAccount(accountNumber);
 		int index = fCheckingAccounts.indexOf(account);
 		return fCheckingAccounts.elementAt(index).withdrawal(amount);
 	}
-	
 }
