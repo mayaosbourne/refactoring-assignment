@@ -8,7 +8,9 @@ import org.junit.Test;
  */
 
 /**
- * @author Dawn
+ * These are the tests for SavingsAccount after refactoring was done.
+ * 
+ * @author Dawn Rocks & Maya Osbourne
  *
  */
 public class SavingsAccountTest2

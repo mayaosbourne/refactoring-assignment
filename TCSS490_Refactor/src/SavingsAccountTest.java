@@ -9,7 +9,11 @@ import org.junit.Test;
  */
 
 /**
- * @author Maya
+ * These are the tests that were done before refactoring was done.
+ * 
+ * Errors are present due to changes from refactoring.
+ * 
+ * @author Dawn Rocks & Maya Osbourne
  *
  */
 public class SavingsAccountTest {

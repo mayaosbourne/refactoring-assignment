@@ -9,8 +9,11 @@ import org.junit.Test;
  */
 
 /**
- * @author Dawn
- *
+ * These are the tests for CreditCard before refactoring was done.
+ * 
+ * Errors are present due to changes from refactoring.
+ * 
+ * @author Dawn Rocks & Maya Osbourne
  */
 public class CreditCardTest
 {

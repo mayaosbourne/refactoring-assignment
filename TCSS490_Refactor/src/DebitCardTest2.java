@@ -8,7 +8,9 @@ import org.junit.Test;
  */
 
 /**
- * @author Dawn
+ * These are the tests for DebitCard after refactoring was done.
+ * 
+ * @author Dawn Rocks & Maya Osbourne
  *
  */
 public class DebitCardTest2

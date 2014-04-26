@@ -6,6 +6,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+/**
+ * These are the tests for DebitCard before refactoring was done.
+ * 
+ * Errors are present due to changes from refactoring.
+ * 
+ * @author Dawn Rocks & Maya Osbourne
+ */
 public class DebitCardTest
 {
 	
@@ -13,9 +20,11 @@ public class DebitCardTest
 	private CheckingAccount checkingOne;
 	private CheckingAccount checkingTwo;
 	private DebitCard debitCardTwo;
-	private DebitCard debitCardThree;
 
-
+	/**
+	 * 
+	 * @throws Exception
+	 */
 	@Before
 	public void setUp() throws Exception
 	{
@@ -27,12 +36,19 @@ public class DebitCardTest
 		
 		
 	}
+	
+	/**
+	 * Test for DebitCard constructor.
+	 */
 	@Test
 	public void testDebitCard()
 	{
 		debitCardThree = new DebitCard("Dawn Rocks", "Mocking Bird Ln", "Seattle", "98146", "USA");
 	}
 
+	/**
+	 * Test for the pay method in the DebitCard class.
+	 */
 	@Test
 	public void testPay()
 	{
