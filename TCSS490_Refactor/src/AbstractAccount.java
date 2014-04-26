@@ -30,13 +30,6 @@ public abstract class AbstractAccount {
 	private static int fNextAccountNumber = 0;
 	
 	/**
-	 * Default constructor.
-	 */
-	public AbstractAccount() {
-		
-	}
-	
-	/**
 	 * Constructor that accepts a customer as a parameter.
 	 * 
 	 * @param customer The customer.
@@ -45,6 +38,16 @@ public abstract class AbstractAccount {
 		myCustomer = customer;
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
+	}
+	
+	/**
+	 * The checking account constructor, sets the account number to the given
+	 * account number upon creation.
+	 * 
+	 * @param accountNumber The account number.
+	 */
+	public AbstractAccount(int accountNumber) {
+		fAccountNumber = accountNumber;
 	}
 
 	/**
@@ -75,14 +78,6 @@ public abstract class AbstractAccount {
 	}
 
 	/**
-	 * Get the account number for this account.
-	 * @return
-	 */
-	public int getAccountNumber() {
-		return fAccountNumber;	
-	}
-	
-	/**
 	 * The print method for this account, which prints out the information
 	 * associated for this accounts (Account number, account holder name,
 	 * address of account holder, and the balance remaining in this account.).
@@ -98,14 +93,6 @@ public abstract class AbstractAccount {
 		System.out.println("**************************************");
 		System.out.println("Balance:  " + fBalance);
 		System.out.println("**************************************");
-	}
-	
-	@Override
-	public boolean equals(Object o) {
-		if(fAccountNumber == ((AbstractAccount)o).fAccountNumber)
-			return true;
-		else
-			return false;
 	}
 	
 	/**

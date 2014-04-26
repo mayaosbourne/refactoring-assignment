@@ -48,6 +48,7 @@ public class Bank {
 	public int openSimpleCheckingAccount() {
 		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
+		System.out.println(fCheckingAccounts.elements());
 		return newAccount.getAccountNumber();
 	}
 	

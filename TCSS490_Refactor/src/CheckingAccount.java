@@ -1,3 +1,4 @@
+
 /**
  * This class defines the behavior of a Checking Account.
  * 
@@ -14,7 +15,7 @@ public class CheckingAccount extends AbstractAccount {
 	/**
 	 * {@inheritDoc}
 	 */
-	private int fAccountNumber;
+	private int fAccountNumber = 0;
 	
 	/**
 	 * {@inheritDoc}
@@ -80,7 +81,7 @@ public class CheckingAccount extends AbstractAccount {
 	 * @param accountNumber The account number.
 	 */
 	public CheckingAccount(int accountNumber) {
-		fAccountNumber = accountNumber;
+		super(accountNumber);
 	}
 	
 	/**
@@ -118,6 +119,14 @@ public class CheckingAccount extends AbstractAccount {
 	}
 
 	/**
+	 * Get the account number for this account.
+	 * @return
+	 */
+	public int getAccountNumber() {
+		return fAccountNumber;	
+	}
+	
+	/**
 	 * Set fBalance to the amount.
 	 * @param amount The amount.
 	 */
@@ -125,4 +134,11 @@ public class CheckingAccount extends AbstractAccount {
 		fBalance = amount;	
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if(fAccountNumber == ((CheckingAccount)o).fAccountNumber)
+			return true;
+		else
+			return false;
+	}
 }

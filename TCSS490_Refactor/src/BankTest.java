@@ -22,7 +22,7 @@ public class BankTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		bankTest = new Bank("Dawn Rocks");
+		bankTest = new Bank();
 	}
 
 	/**
@@ -49,7 +49,8 @@ public class BankTest {
 	@Test
 	public void testWithdrawMoney() {
 		int accountNum = bankTest.openSimpleCheckingAccount();
-		assertFalse("Test withdraw money", bankTest.withdrawMoney(accountNum, 5));
+		bankTest.withdrawMoney(1,0);
+		assertFalse("Test withdraw money", bankTest.withdrawMoney(accountNum, 0));
 	}
 
 }
