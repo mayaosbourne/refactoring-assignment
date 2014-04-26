@@ -3,7 +3,7 @@
  * general behavior for an account type class (Savings or Checking
  * for example).
  * 
- * @author unknown
+ * @author original author unknown
  * @author refactored by Maya Osbourne & Dawn Rocks
  * @version 4.25.2014
  */
@@ -46,17 +46,7 @@ public abstract class AbstractAccount {
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 	}
-	
-	/**
-	 * The account constructor, accepts an account number
-	 * as a parameter.
-	 * 
-	 * @param accountNumber The account number.
-	 */
-	public AbstractAccount(int accountNumber) {
-		fAccountNumber = accountNumber;
-	}
-	
+
 	/**
 	 * Increase the balance for this account by the amount given.
 	 * 

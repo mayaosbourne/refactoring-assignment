@@ -1,10 +1,10 @@
 /**
- * This class 
+ * This is the savings account class, which defines
+ * behaviors associated with a savings account.
  * 
- * @author unknown
+ * @author original author unknown
  * @author refactored by Maya Osbourne & Dawn Rocks
  * @version 4.25.2014
- *
  */
 public class SavingsAccount extends AbstractAccount {
 	
@@ -18,14 +18,27 @@ public class SavingsAccount extends AbstractAccount {
 	 */
 	private static double interestRate = 1.25;
 	
+	/**
+	 * The savings account constructor.
+	 * 
+	 * @param customer The customer.
+	 */
 	public SavingsAccount(Customer customer) {
 		super(customer);
 	}
 	
+	/**
+	 * Calculate the interest earned according to the
+	 * balance in this account.
+	 */
 	public void calculateInterest() {
 		fBalance = fBalance + (fBalance * interestRate / 100);
 	}
 	
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
 	public boolean withdrawal(double amount) {
 		if(((fBalance - amount) < 0)) {
 			return false;

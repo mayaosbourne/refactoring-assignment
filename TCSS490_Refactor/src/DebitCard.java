@@ -1,7 +1,7 @@
 /**
  * This class 
  * 
- * @author unknown
+ * @author original author unknown
  * @author refactored by Maya Osbourne & Dawn Rocks
  * @version 4.25.2014
  *

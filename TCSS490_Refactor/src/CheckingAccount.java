@@ -5,11 +5,16 @@
  * determine costs, withdraw, and other checking account
  * behaviors.
  * 
- * @author unknown
+ * @author original author unknown
  * @author refactored by Maya Osbourne & Dawn Rocks
  * @version 4.25.2014
  */
 public class CheckingAccount extends AbstractAccount {
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	private int fAccountNumber;
 	
 	/**
 	 * {@inheritDoc}
@@ -66,6 +71,16 @@ public class CheckingAccount extends AbstractAccount {
 		super(customer);
 		fDebitAllowed = true;
 		fDebitAmount = debit;
+	}
+	
+	/**
+	 * The checking account constructor, sets the account number to the given
+	 * account number upon creation.
+	 * 
+	 * @param accountNumber The account number.
+	 */
+	public CheckingAccount(int accountNumber) {
+		fAccountNumber = accountNumber;
 	}
 	
 	/**
