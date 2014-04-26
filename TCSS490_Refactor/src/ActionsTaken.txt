@@ -20,6 +20,6 @@ Bad smell(s): Duplicate code in classes and across classes. Too long of paramete
 
 8. In both of the accounts classes, verseMoney was taken out since it has the same exact function as increaseBalance. We changed verseBalance in SavingsAccount to increaseBalance. This was a duplicate code bad smell.
 
-9. Created an interface for account in order to remove duplicate code from both SavingsAccount and CheckingAccount. They both had similar methods or exact methods, and the similar method (withdrawal method) was implemented as abstract in the abstract class in order to ensure that it was utilized in both account classes.
+9. Created an interface for account in order to remove duplicate code from both SavingsAccount and CheckingAccount. They both had similar methods (increaseBalance, decreaseBalance, withdrawal, the constructors, getBalance, getAccountNumber,  or exact methods, and the similar method (withdrawal method) was implemented as abstract in the abstract class in order to ensure that it was utilized in both account classes.
 
 10.

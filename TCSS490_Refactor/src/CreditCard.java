@@ -1,4 +1,11 @@
-
+/**
+ * This class 
+ * 
+ * @author unknown
+ * @author refactored by Maya Osbourne & Dawn Rocks
+ * @version 4.25.2014
+ *
+ */
 public class CreditCard {
 	
 	private double fLimit; // you cannot spend more than this limit
