@@ -5,6 +5,7 @@ public class Bank
 {
 	private String fName;
 	private Customer fCustomer;
+	private CreditCard fCreditCard;
 	private Vector<CheckingAccount> fCheckingAccounts;
 	private Vector<SavingsAccount> fSavingAccounts;
 	
@@ -27,11 +28,28 @@ public class Bank
 	{
 		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
-		newAccount.applyForCreditCard(fCustomer, newAccount.getAccountNumber());
+		applyForCreditCard(fCustomer, newAccount);
 		SavingsAccount newSavingsAccount = new SavingsAccount(fCustomer);
 		fSavingAccounts.add(newSavingsAccount);
 		DebitCard newDebetCard = new DebitCard(fCustomer, 0, newAccount);
 		return newAccount.getAccountNumber();
+	}
+	
+	public boolean applyForCreditCard(Customer customer, CheckingAccount account)
+	{
+		if(account.getBalance() < 0)
+		{
+			return false;
+		}
+		if(account.getBalance() <= 2500)
+		{
+			fCreditCard = new CreditCard(customer);
+		}
+		else
+		{
+			fCreditCard = new CreditCard(customer, 5000);
+		}
+		return true;
 	}
 	
 	public boolean withdrawMoney(int accountNumber, double amount)

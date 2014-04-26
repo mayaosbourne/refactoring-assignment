@@ -12,9 +12,9 @@ Bad smell(s): Duplicate code in classes and across classes. Too long of paramete
 
 4. In CheckingAccount, CreditCard, DebitCard, and SavingsAccount; I fixed the parameters to fix the bad smell regarding to the too long of parameters and the duplicate code bad smell.
 
-5.
+5. In CheckingAccount, in applyForCreditCard, there was an unused parameter relating to the Speculative Generality bad smell. There were also fields in this class named fSavingsAccount and fDebitCard.
 
-6.
+6. In CheckingAccount and in Bank, there was a method named applyForCreditCard that referred to the feature envy bad smell. I moved applyForCreditCard to the Bank class, since it seemed to belong there.
 
 7.
 

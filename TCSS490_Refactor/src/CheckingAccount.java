@@ -10,8 +10,6 @@ public class CheckingAccount
 									// that equals 1 pound
 	private static double debitRate = 4.7;
 	private static CreditCard fCreditCard;
-	private static SavingsAccount fSavingsAccount;
-	private static DebitCard fDebitCard;
 	private static int fNextAccountNumber = 0;
 	
 	public CheckingAccount(Customer customer)
@@ -81,23 +79,6 @@ public class CheckingAccount
 	public void verseMoney(double amount)
 	{
 		fBalance += amount;
-	}
-	
-	public boolean applyForCreditCard(Customer customer, int accountNumber)
-	{
-		if(fBalance < 0)
-		{
-			return false;
-		}
-		if(fBalance <= 2500)
-		{
-			fCreditCard = new CreditCard(customer);
-		}
-		else
-		{
-			fCreditCard = new CreditCard(customer, 5000);
-		}
-		return true;
 	}
 	
 	public double getBalance()
