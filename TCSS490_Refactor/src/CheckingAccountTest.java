@@ -9,7 +9,8 @@ import org.junit.Test;
  */
 
 /**
- * @author Maya
+ * Pre refactoring test. **** Errors are present due to changes in refactoring****
+ * @author Dawn Rocks & Maya Osbourne 
  *
  */
 public class CheckingAccountTest {

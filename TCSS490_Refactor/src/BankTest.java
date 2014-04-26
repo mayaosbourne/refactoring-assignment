@@ -8,9 +8,10 @@ import org.junit.Test;
  * 
  */
 
+
 /**
- * Pre refactoring test. 
- * @author Maya
+ * Pre refactoring test. **** Errors are present due to changes in refactoring****
+ * @author Dawn Rocks & Maya Osbourne 
  *
  */
 public class BankTest {

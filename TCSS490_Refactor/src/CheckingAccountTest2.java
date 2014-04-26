@@ -3,6 +3,11 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * These are the tests for the CheckingAccount after refactoring was done. 
+ * @author Dawn Rocks & Maya Osbourne 
+ *
+ */
 
 public class CheckingAccountTest2
 {

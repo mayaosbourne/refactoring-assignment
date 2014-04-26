@@ -1,5 +1,6 @@
 
 /**
+ * 
  * This class defines the behavior of a Checking Account.
  * 
  * It allows the user to create a new checking account,
