@@ -1,6 +1,6 @@
 
-public class DebitCard 
-{
+public class DebitCard {
+	
 	private CheckingAccount fAccountConnectedTo;
 	
 	public DebitCard(double limit, CheckingAccount account) {
