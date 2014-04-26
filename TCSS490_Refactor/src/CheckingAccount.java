@@ -1,8 +1,7 @@
 
-public class CheckingAccount 
-{
+public class CheckingAccount extends AbstractAccount {
+	
 	private int fAccountNumber;
-	private Customer myCustomer;
 	private boolean fDebitAllowed;
 	private double fDebitAmount;
 	private double fBalance;
@@ -11,107 +10,61 @@ public class CheckingAccount
 	private static double debitRate = 4.7;
 	private static int fNextAccountNumber = 0;
 	
-	public CheckingAccount(Customer customer)
-	{
-		myCustomer = customer;
+	public CheckingAccount(Customer customer) {
+		super(customer);
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 		fDebitAllowed = false;
 		fDebitAmount = 0;
-		
 	}
 	
-	public CheckingAccount(Customer customer, float debit)
-	{
-		myCustomer = customer;
+	public CheckingAccount(Customer customer, float debit) {
+		super(customer);
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 		fDebitAllowed = true;
 		fDebitAmount = debit;
 	}
 	
-	public CheckingAccount(int accountnumber)
-	{
+	public CheckingAccount(int accountnumber) {
 		fAccountNumber = accountnumber;
 	}
 	
-	public void determineCosts()
-	{
+	public void determineCosts() {
 		fBalance = fBalance - costs;
-		if(fBalance < 0)
-		{
+		if(fBalance < 0) {
 			fBalance = fBalance - (fBalance * debitRate / 100);
 		}
 	}
-	
-	public boolean withdrawal(double amount)
-	{
-		if(((fBalance - amount) < 0) && (!fDebitAllowed))
-		{
+
+	public boolean withdrawal(double amount) {
+		if(((fBalance - amount) < 0) && (!fDebitAllowed)) {
 			return false;
-		}
-		else if((fBalance - amount) < -fDebitAmount)
-		{
+		} else if((fBalance - amount) < -fDebitAmount) {
 			fBalance = fBalance - amount;
 			return true;
-		}
-		else
-		{
+		} else {
 			return false;
 		}
 	}
-	
-	public double getBalance()
-	{
-		return fBalance;
-	}
-	
-	public void increaseBalance(double amount)
-	{
-		fBalance += amount;
-	}
-	
-	public void decreaseBalance(double amount)
-	{
-		fBalance -= amount;
-	}
 
-	public double getDebitAmount()
-	{
+	public double getDebitAmount() {
 		return fDebitAmount;
 	}
 
-	public void setBalance(double amount)
-	{
+	public void setBalance(double amount) {
 		fBalance = amount;	
 	}
 
-	public int getAccountNumber() 
-	{
+	public int getAccountNumber() {
 		return fAccountNumber;	
 	}
 	
-	public boolean equals(Object o)
-	{
+	public boolean equals(Object o) {
 		if(fAccountNumber == ((CheckingAccount)o).fAccountNumber)
 			return true;
 		else
 			return false;
-				
-	}
-	
-	public void print()
-	{
-		System.out.println("**************************************");
-		System.out.println("Savings account:     " + fAccountNumber);
-		System.out.println("Account holder name: " + myCustomer.getfName());
-		System.out.println("Address:             " + myCustomer.getfStreet());
-		System.out.print("                     " + myCustomer.getfZipcode());
-		System.out.println(" " + myCustomer.getfTown());
-		System.out.println(myCustomer.getfCountry().toUpperCase());
-		System.out.println("**************************************");
-		System.out.println("Balance:  " + fBalance);
-		System.out.println("**************************************");
 	}
 	
 }
