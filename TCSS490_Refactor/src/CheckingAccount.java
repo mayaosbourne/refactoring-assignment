@@ -2,7 +2,7 @@
 public class CheckingAccount 
 {
 	private int fAccountNumber;
-	private Customer customer;
+	private Customer myCustomer;
 	private boolean fDebitAllowed;
 	private double fDebitAmount;
 	private double fBalance;
@@ -14,9 +14,9 @@ public class CheckingAccount
 	private static DebitCard fDebitCard;
 	private static int fNextAccountNumber = 0;
 	
-	public CheckingAccount(String name, String street, String zipCode, String town, String country)
+	public CheckingAccount(Customer customer)
 	{
-		customer = new Customer(name, street, zipCode, town, country);
+		myCustomer = customer;
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 		fDebitAllowed = false;
@@ -24,9 +24,9 @@ public class CheckingAccount
 		
 	}
 	
-	public CheckingAccount(String name, String street, String zipCode, String town, String country, float debit)
+	public CheckingAccount(Customer customer, float debit)
 	{
-		customer = new Customer(name, street, zipCode, town, country);
+		myCustomer = customer;
 		fAccountNumber = fNextAccountNumber;
 		fNextAccountNumber++;
 		fDebitAllowed = true;
@@ -51,11 +51,11 @@ public class CheckingAccount
 	{
 		System.out.println("**************************************");
 		System.out.println("Savings account:     " + fAccountNumber);
-		System.out.println("Account holder name: " + customer.getfName());
-		System.out.println("Address:             " + customer.getfStreet());
-		System.out.print("                     " + customer.getfZipcode());
-		System.out.println(" " + customer.getfTown());
-		System.out.println(customer.getfCountry().toUpperCase());
+		System.out.println("Account holder name: " + myCustomer.getfName());
+		System.out.println("Address:             " + myCustomer.getfStreet());
+		System.out.print("                     " + myCustomer.getfZipcode());
+		System.out.println(" " + myCustomer.getfTown());
+		System.out.println(myCustomer.getfCountry().toUpperCase());
 		System.out.println("**************************************");
 		System.out.println("Balance:  " + fBalance);
 		System.out.println("**************************************");
@@ -83,7 +83,7 @@ public class CheckingAccount
 		fBalance += amount;
 	}
 	
-	public boolean applyForCreditCard(String name, String street, String zipCode, String town, String country, int accountNumber)
+	public boolean applyForCreditCard(Customer customer, int accountNumber)
 	{
 		if(fBalance < 0)
 		{
@@ -91,11 +91,11 @@ public class CheckingAccount
 		}
 		if(fBalance <= 2500)
 		{
-			fCreditCard = new CreditCard(name, street, town, zipCode, country);
+			fCreditCard = new CreditCard(customer);
 		}
 		else
 		{
-			fCreditCard = new CreditCard(name, street, town, zipCode, country, 5000);
+			fCreditCard = new CreditCard(customer, 5000);
 		}
 		return true;
 	}
