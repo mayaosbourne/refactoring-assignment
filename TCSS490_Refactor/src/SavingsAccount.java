@@ -3,8 +3,6 @@ public class SavingsAccount {
 	private int fAccountNumber;
 	private Customer myCustomer;
 	public double fBalance;
-	private static double costs = 1; // per period there is a cost associated with this account
-									// that equals 1 pound
 	private static double interestRate = 1.25;
 	private static int fNextAccountNumber = 0;
 	
