@@ -84,6 +84,13 @@ public abstract class AbstractAccount {
 	public void setBalance(double amount) {
 		fBalance = amount;	
 	}
+	/**
+	 * Get the account number for this account.
+	 * @return
+	 */
+	public int getAccountNumber() {
+		return fAccountNumber;
+	}
 
 	/**
 	 * The print method for this account, which prints out the information
