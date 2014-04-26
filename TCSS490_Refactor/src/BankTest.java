@@ -9,6 +9,7 @@ import org.junit.Test;
  */
 
 /**
+ * Pre refactoring test. 
  * @author Maya
  *
  */
@@ -23,14 +24,6 @@ public class BankTest {
 	public void setUp() throws Exception {
 		bankTest = new Bank("Dawn Rocks");
 	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@After
-	public void tearDown() throws Exception {
-	}
-
 
 	/**
 	 * Test method for {@link Bank#openSimpleCheckingAccount()}.
