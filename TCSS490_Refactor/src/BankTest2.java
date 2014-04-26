@@ -7,19 +7,22 @@ import org.junit.Test;
  * 
  */
 
+
 /**
- * @author Dawn
+ * These are the tests for the Bank after refactoring was done. 
+ * @author Dawn Rocks & Maya Osbourne 
  *
  */
 public class BankTest2
 {
 
 	private Bank bankTest;
+	
 	private Bank bankTest1;
 	
 	private Customer customerOne;
+	
 	private Customer customerTwo;
-	private Bank bankTest2;
 
 	/**
 	 * @throws java.lang.Exception
@@ -29,7 +32,6 @@ public class BankTest2
 	{
 		bankTest = new Bank();
 		bankTest1 = new Bank();
-		bankTest2 = new Bank();
 		customerOne = new Customer("Dawn Rocks", "Mocking Bird Ln", 
 				"98146", "Seattle", "USA");
 		customerTwo = new Customer("Maya Rocks Also", "Mocking Bird Ln", 

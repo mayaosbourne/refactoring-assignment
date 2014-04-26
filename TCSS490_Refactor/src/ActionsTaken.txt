@@ -23,3 +23,5 @@ Bad smell(s): Duplicate code in classes and across classes. Too long of paramete
 9. Created an interface for account in order to remove duplicate code from both SavingsAccount and CheckingAccount. They both had similar methods (increaseBalance, decreaseBalance, withdrawal, the constructors, getBalance, getAccountNumber,  or exact methods, and the similar method (withdrawal method) was implemented as abstract in the abstract class in order to ensure that it was utilized in both account classes.
 
 10. Added comments to all of the methods and classes in this project in order to address the no comments bad smell.
+
+JUnit testing after refactoring completed. All tests labeled with a 2 at the end indentify tests created AFTER refactoring was completed. 

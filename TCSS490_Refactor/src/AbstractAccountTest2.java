@@ -8,7 +8,8 @@ import org.junit.Test;
  */
 
 /**
- * @author Dawn
+ * These are the tests for AbstractAccount after refactoring was done. 
+ * @author Dawn Rocks & Maya Osbourne 
  *
  */
 public class AbstractAccountTest2
@@ -36,23 +37,6 @@ public class AbstractAccountTest2
 		checkingAccThree = new CheckingAccount(3);
 	}
 
-//	/**
-//	 * Test method for {@link AbstractAccount#AbstractAccount()}.
-//	 */
-//	@Test
-//	public void testAbstractAccount()
-//	{
-//		fail("Not yet implemented");
-//	}
-//
-//	/**
-//	 * Test method for {@link AbstractAccount#AbstractAccount(Customer)}.
-//	 */
-//	@Test
-//	public void testAbstractAccountCustomer()
-//	{
-//		fail("Not yet implemented");
-//	}
 
 	/**
 	 * Test method for {@link AbstractAccount#increaseBalance(double)}.
