@@ -4,6 +4,7 @@ import java.util.Vector;
 public class Bank 
 {
 	private String fName;
+	private Customer fCustomer;
 	private Vector<CheckingAccount> fCheckingAccounts;
 	private Vector<SavingsAccount> fSavingAccounts;
 	
@@ -12,23 +13,24 @@ public class Bank
 		fName = name;
 		fCheckingAccounts = new Vector<CheckingAccount>();
 		fSavingAccounts = new Vector<SavingsAccount>();
+		fCustomer = new Customer("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA");
 	}
 	
 	public int openSimpleCheckingAccount()
 	{
-		CheckingAccount newAccount = new CheckingAccount("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA");
+		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
 		return newAccount.getAccountNumber();
 	}
 	
 	public int openFullPackage()
 	{
-		CheckingAccount newAccount = new CheckingAccount("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA");
+		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
-		newAccount.applyForCreditCard("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA", newAccount.getAccountNumber());
-		SavingsAccount newSavingsAccount = new SavingsAccount("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA");
+		newAccount.applyForCreditCard(fCustomer newAccount.getAccountNumber());
+		SavingsAccount newSavingsAccount = new SavingsAccount(fCustomer);
 		fSavingAccounts.add(newSavingsAccount);
-		DebitCard newDebetCard = new DebitCard("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA", 0, newAccount);
+		DebitCard newDebetCard = new DebitCard(fCustomer, 0, newAccount);
 		return newAccount.getAccountNumber();
 	}
 	
