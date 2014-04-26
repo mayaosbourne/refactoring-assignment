@@ -8,4 +8,18 @@ DebitCard
 CreditCard
 Bad smell(s): Duplicate code in classes and across classes. Too long of parameters due to passing in all the customer information. Data clumps with the same code in multiple classes. Refactoring the customer information to its own class and passing a customer object with any other information as a parameter will solve both these issues. 
 
-3.Created a customer object in Bank for Bob Smith and passed that into the account objects. This resolved the duplicate code and too long of parameters. 
+3.Created a customer object in Bank for Bob Smith and passed that into the account objects. This resolved the duplicate code and too long of parameters.
+
+4. In CheckingAccount, CreditCard, DebitCard, and SavingsAccount; I fixed the parameters to fix the bad smell regarding to the too long of parameters and the duplicate code bad smell.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
