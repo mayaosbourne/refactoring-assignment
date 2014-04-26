@@ -1,8 +1,11 @@
 Steps taken. 
-1. JUnit Testing Complete
+1. JUnit Testing Complete  
+
 2.Refactored customer information from the following classes: 
 CheckingAccount
 SavingsAccount
 DebitCard
 CreditCard
 Bad smell(s): Duplicate code in classes and across classes. Too long of parameters due to passing in all the customer information. Data clumps with the same code in multiple classes. Refactoring the customer information to its own class and passing a customer object with any other information as a parameter will solve both these issues. 
+
+3.Created a customer object in Bank for Bob Smith and passed that into the account objects. This resolved the duplicate code and too long of parameters. 
