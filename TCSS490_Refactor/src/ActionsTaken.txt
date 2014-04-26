@@ -10,7 +10,7 @@ Bad smell(s): Duplicate code in classes and across classes. Too long of paramete
 
 3.Created a customer object in Bank for Bob Smith and passed that into the account objects. This resolved the duplicate code and too long of parameters.
 
-4. In CheckingAccount, CreditCard, DebitCard, and SavingsAccount; I fixed the parameters to fix the bad smell regarding to the too long of parameters and the duplicate code bad smell.
+4. In CheckingAccount, CreditCard, DebitCard, and SavingsAccount; I fixed the parameters in each of the constructors and methods containing customer related information to fix the bad smell regarding to the too long of parameters and the duplicate code bad smell.
 
 5. In CheckingAccount, in applyForCreditCard, there was an unused parameter relating to the Speculative Generality bad smell. There were also fields in this class named fSavingsAccount and fDebitCard.
 
