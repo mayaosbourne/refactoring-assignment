@@ -4,19 +4,19 @@ public class DebitCard
 	private static int fLastDebitCardNumber;
 	private CheckingAccount fAccountConnectedTo;
 	private int fDebitCardNumber;
-	private Customer customer;
+	private Customer myCustomer;
 	
 	
-	public DebitCard(String name, String street, String town, String zipCode, String country)
+	public DebitCard(Customer customer)
 	{
-		customer = new Customer(name, street, zipCode, town, country);
+		myCustomer = customer;
 		fDebitCardNumber = fLastDebitCardNumber;
 		fLastDebitCardNumber++;
 	}
 	
-	public DebitCard(String name, String street, String town, String zipCode, String country, double limit, CheckingAccount account)
+	public DebitCard(Customer customer, double limit, CheckingAccount account)
 	{
-		customer = new Customer(name, street, zipCode, town, country);
+		myCustomer = customer;
 		fDebitCardNumber = fLastDebitCardNumber;
 		fLastDebitCardNumber++;
 		fAccountConnectedTo = account;

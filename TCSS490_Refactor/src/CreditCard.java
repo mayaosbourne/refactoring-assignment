@@ -6,18 +6,18 @@ public class CreditCard
 	private int fCreditCardNumber;
 	private double fLimit; // you cannot spend more than this limit
 	private double fBalance;
-	private Customer customer;
+	private Customer myCustomer;
 	
-	public CreditCard(String name, String street, String town, String zipCode, String country)
+	public CreditCard(Customer customer)
 	{
-		customer = new Customer(name, street, zipCode, town, country);
+		myCustomer = customer;
 		fLimit = 2500; // standard limit
 		fBalance = 0;
 	}
 	
-	public CreditCard(String name, String street, String town, String zipCode, String country, double limit)
+	public CreditCard(Customer customer, double limit)
 	{
-		customer = new Customer(name, street, zipCode, town, country);
+		myCustomer = customer;
 		fLimit = limit;
 		fBalance = 0;
 	}

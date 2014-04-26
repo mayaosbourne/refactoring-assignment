@@ -27,7 +27,7 @@ public class Bank
 	{
 		CheckingAccount newAccount = new CheckingAccount(fCustomer);
 		fCheckingAccounts.add(newAccount);
-		newAccount.applyForCreditCard(fCustomer newAccount.getAccountNumber());
+		newAccount.applyForCreditCard(fCustomer, newAccount.getAccountNumber());
 		SavingsAccount newSavingsAccount = new SavingsAccount(fCustomer);
 		fSavingAccounts.add(newSavingsAccount);
 		DebitCard newDebetCard = new DebitCard(fCustomer, 0, newAccount);
