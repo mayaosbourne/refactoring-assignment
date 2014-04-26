@@ -15,9 +15,13 @@ public class AbstractAccountTest2
 {
 
 	private Customer customerOne;
+	
 	private CheckingAccount checkingAccOne;
-	private Customer customerTwo;
+	
 	private CheckingAccount checkingAccTwo;
+	
+	@SuppressWarnings("unused")
+	private CheckingAccount checkingAccThree;
 
 	/**
 	 * @throws java.lang.Exception
@@ -29,8 +33,7 @@ public class AbstractAccountTest2
 		checkingAccTwo = new CheckingAccount(customerOne, 1);
 		customerOne = new Customer("Dawn Rocks", "Mocking Bird Ln", 
 				"98146", "Seattle", "USA");
-//		customerTwo = new Customer("Maya Rocks Also", "Mocking Bird Ln", 
-//				"98146", "Seattle", "USA");
+		checkingAccThree = new CheckingAccount(3);
 	}
 
 //	/**
@@ -96,6 +99,17 @@ public class AbstractAccountTest2
 		assertFalse("Testing withdrawal false", checkingAccOne.withdrawal(2));
 		
 		assertTrue("Testing withdrawal true", checkingAccTwo.withdrawal(2));
+	}
+	
+	/**
+	 * Test method for {@link AbstractAccount#setBalance(double)}.
+	 */
+	@Test
+	public void testSetBalance()
+	{
+		CheckingAccount checkOne = new CheckingAccount(customerOne, 1);
+		checkOne.setBalance(1000);
+		assertEquals(1000, checkOne.getBalance(), 0.001);
 	}
 
 }

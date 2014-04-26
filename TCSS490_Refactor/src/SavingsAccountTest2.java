@@ -47,7 +47,7 @@ public class SavingsAccountTest2
 		SavingsAccount saveTest = new SavingsAccount(customerOne);
 		saveTest.increaseBalance(10);
 		saveTest.calculateInterest();
-		assertEquals(saveTest.fBalance, 10.125, 0.001);
+		assertEquals(saveTest.getBalance(), 10.125, 0.001);
 	}
 	
 	/**

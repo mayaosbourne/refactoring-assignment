@@ -126,13 +126,6 @@ public class CheckingAccount extends AbstractAccount {
 		return fAccountNumber;	
 	}
 	
-	/**
-	 * Set fBalance to the amount.
-	 * @param amount The amount.
-	 */
-	public void setBalance(double amount) {
-		fBalance = amount;	
-	}
 	
 	@Override
 	public boolean equals(Object o) {

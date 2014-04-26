@@ -76,6 +76,14 @@ public abstract class AbstractAccount {
 	public double getBalance() {
 		return fBalance;
 	}
+	
+	/**
+	 * Set fBalance to the amount.
+	 * @param amount The amount.
+	 */
+	public void setBalance(double amount) {
+		fBalance = amount;	
+	}
 
 	/**
 	 * The print method for this account, which prints out the information

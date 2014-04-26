@@ -32,7 +32,7 @@ public class SavingsAccount extends AbstractAccount {
 	 * balance in this account.
 	 */
 	public void calculateInterest() {
-		fBalance = super.getBalance() + (super.getBalance() * interestRate / 100);
+		super.setBalance(super.getBalance() + (super.getBalance() * interestRate / 100));
 	}
 	
 	/**
@@ -40,7 +40,7 @@ public class SavingsAccount extends AbstractAccount {
 	 */
 	@Override
 	public boolean withdrawal(double amount) {
-		if(((fBalance - amount) < 0)) {
+		if(((super.getBalance() - amount) < 0)) {
 			return false;
 		} else {
 			fBalance = fBalance - amount;
