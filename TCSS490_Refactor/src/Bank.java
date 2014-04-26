@@ -30,7 +30,7 @@ public class Bank
 		applyForCreditCard(fCustomer, newAccount);
 		SavingsAccount newSavingsAccount = new SavingsAccount(fCustomer);
 		fSavingAccounts.add(newSavingsAccount);
-		DebitCard newDebetCard = new DebitCard(0, newAccount);
+		DebitCard newDebitCard = new DebitCard(0, newAccount);
 		return newAccount.getAccountNumber();
 	}
 	
