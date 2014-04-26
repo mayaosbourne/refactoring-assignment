@@ -9,7 +9,6 @@ public class CheckingAccount
 	private static double costs = 1; // per period there is a cost associated with this account
 									// that equals 1 pound
 	private static double debitRate = 4.7;
-	private static CreditCard fCreditCard;
 	private static int fNextAccountNumber = 0;
 	
 	public CheckingAccount(Customer customer)

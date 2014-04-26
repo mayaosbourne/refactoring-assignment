@@ -1,24 +1,10 @@
 
 public class DebitCard 
 {
-	private static int fLastDebitCardNumber;
 	private CheckingAccount fAccountConnectedTo;
-	private int fDebitCardNumber;
-	private Customer myCustomer;
 	
-	
-	public DebitCard(Customer customer)
+	public DebitCard(double limit, CheckingAccount account)
 	{
-		myCustomer = customer;
-		fDebitCardNumber = fLastDebitCardNumber;
-		fLastDebitCardNumber++;
-	}
-	
-	public DebitCard(Customer customer, double limit, CheckingAccount account)
-	{
-		myCustomer = customer;
-		fDebitCardNumber = fLastDebitCardNumber;
-		fLastDebitCardNumber++;
 		fAccountConnectedTo = account;
 	}
 	

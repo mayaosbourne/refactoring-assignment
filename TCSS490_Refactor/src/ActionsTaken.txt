@@ -16,7 +16,7 @@ Bad smell(s): Duplicate code in classes and across classes. Too long of paramete
 
 6. In CheckingAccount and in Bank, there was a method named applyForCreditCard that referred to the feature envy bad smell. I moved applyForCreditCard to the Bank class, since it seemed to belong there.
 
-7.
+7. In Bank, there was Speculative Generality for the constructor (the parameter fName is never used anywhere in the code, other than setting it to name, which is also not used) and we removed the costs field from SavingsAccount for the same reason. In CreditCard, the fields: fLastCreditCardNumber, fAccountConnectedTo, fCreditCardNumber are not being used and have also been removed due to speculative generality. Any information relating to customer was removed from CreditCard due to speculative generality. Account numbers associated with credit card and debit card were removed due to  speculative generality and the default constructor for debit card was removed because of speculative generality. The account number associated with savings account was also removed due to speculative generality.
 
 8.
 

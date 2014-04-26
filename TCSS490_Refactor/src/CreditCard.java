@@ -1,23 +1,17 @@
 
 public class CreditCard 
 {
-	private static int fLastCreditCardNumber;
-	private int fAccountConnectedTo;
-	private int fCreditCardNumber;
 	private double fLimit; // you cannot spend more than this limit
 	private double fBalance;
-	private Customer myCustomer;
 	
-	public CreditCard(Customer customer)
+	public CreditCard()
 	{
-		myCustomer = customer;
 		fLimit = 2500; // standard limit
 		fBalance = 0;
 	}
 	
-	public CreditCard(Customer customer, double limit)
+	public CreditCard(double limit)
 	{
-		myCustomer = customer;
 		fLimit = limit;
 		fBalance = 0;
 	}

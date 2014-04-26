@@ -3,15 +3,14 @@ import java.util.Vector;
 
 public class Bank 
 {
-	private String fName;
+
 	private Customer fCustomer;
 	private CreditCard fCreditCard;
 	private Vector<CheckingAccount> fCheckingAccounts;
 	private Vector<SavingsAccount> fSavingAccounts;
 	
-	public Bank(String name)
+	public Bank()
 	{
-		fName = name;
 		fCheckingAccounts = new Vector<CheckingAccount>();
 		fSavingAccounts = new Vector<SavingsAccount>();
 		fCustomer = new Customer("Bob Smith", "1 Main St.", "12345", "Tacoma", "USA");
@@ -31,7 +30,7 @@ public class Bank
 		applyForCreditCard(fCustomer, newAccount);
 		SavingsAccount newSavingsAccount = new SavingsAccount(fCustomer);
 		fSavingAccounts.add(newSavingsAccount);
-		DebitCard newDebetCard = new DebitCard(fCustomer, 0, newAccount);
+		DebitCard newDebetCard = new DebitCard(0, newAccount);
 		return newAccount.getAccountNumber();
 	}
 	
@@ -43,11 +42,11 @@ public class Bank
 		}
 		if(account.getBalance() <= 2500)
 		{
-			fCreditCard = new CreditCard(customer);
+			fCreditCard = new CreditCard();
 		}
 		else
 		{
-			fCreditCard = new CreditCard(customer, 5000);
+			fCreditCard = new CreditCard(5000);
 		}
 		return true;
 	}

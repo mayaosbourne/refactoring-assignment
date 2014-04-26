@@ -4,13 +4,10 @@ public class SavingsAccount {
 	private Customer myCustomer;
 	public double fBalance;
 	private static double interestRate = 1.25;
-	private static int fNextAccountNumber = 0;
 	
 	public SavingsAccount(Customer customer)
 	{
 		myCustomer = customer;
-		fAccountNumber = fNextAccountNumber;
-		fNextAccountNumber++;
 	}
 	
 	public void calculateInterest()
